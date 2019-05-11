@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <data>
+        <variable
+            name="topSongViewHolder"
+            type="com.example.thangpham.mvvcmusicapp.view.adapters.TopSongAdapter.TopSongViewHolder"/>
+    </data>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:setImage="@{topSongViewHolder.imageurl}"
+            android:id="@+id/iv_song"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_margin="8dp" />
+
+        <TextView
+            android:id="@+id/tv_songName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_toRightOf="@id/iv_song"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{topSongViewHolder.songName}"
+            android:textColor="#fff"
+            android:textSize="18dp" />
+
+        <TextView
+            android:id="@+id/tv_artist"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_songName"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/iv_song"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@{topSongViewHolder.artistName}"
+            android:textColor="#7dffffff"
+            />
+    </RelativeLayout>
+</layout>

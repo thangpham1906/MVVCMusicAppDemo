@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout  xmlns:bind="http://schemas.android.com/apk/res-auto">
+    <data >
+        <variable
+            name="viewHolder"
+            type="com.example.thangpham.mvvcmusicapp.view.adapters.MusicTypeAdapter.ViewHolder"/>
+
+    </data>
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:background="@color/colorPrimary"
+        android:layout_height="170dp">
+        <ImageView
+            android:setImage="@{viewHolder.imageUrl}"
+            android:id="@+id/iv_imageMusicType"
+            android:scaleType="centerCrop"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <TextView
+            android:background="@drawable/custom_gradient_text_top_to_bot"
+            android:textColor="#fff"
+            android:textAllCaps="true"
+            android:padding="16dp"
+            android:layout_alignParentBottom="true"
+            android:textSize="18sp"
+            android:text="@{viewHolder.songName}"
+            android:id="@+id/tv_songName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </RelativeLayout>
+</layout>
